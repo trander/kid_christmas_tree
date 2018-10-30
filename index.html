@@ -2,10 +2,22 @@
     <head>
         <title>Christmas Card</title>
         <style>
+            .container {
+                border: 5px solid green;
+                width: 400px;
+                height: 600px;
+            }
+
+            .message {
+                background-color: red;
+                color: white;
+               
+            }
             img {
                 width: 60px;
                 height: 70px; 
             }
+
         </style>
     </head>
     <body>
@@ -17,13 +29,20 @@
             </div>
             <div id="tree"></div>
             <div class="gift">
-                <img src="box1.PNG">
+                <img src="box1.dPNG">
                 <img src="box2.PNG">
             </div>
         </div>       
         <script>
             var tree = document.getElementById("tree");
             tree.innerHTML = "* ** ***";
+            var rows=5;
+            for(var i=1; i<= 5; i++) { 
+                for(var j=1; j<=i; j++) { 
+                    document.write('*'); 
+                    } 
+                    document.write('<br/>');
+                }
         </script>
     </body>
 </html>
