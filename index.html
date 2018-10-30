@@ -36,13 +36,23 @@
         <script>
             var tree = document.getElementById("tree");
             tree.innerHTML = "* ** ***";
-            var rows=5;
-            for(var i=1; i<= 5; i++) { 
-                for(var j=1; j<=i; j++) { 
-                    document.write('*'); 
-                    } 
-                    document.write('<br/>');
+            var rows;
+            for(var i=1;i<=5;i++) {
+                for(var j=1;j<=i;j++) { 
+                    document.write("*"); 
                 }
+                document.write('<br/>');
+            }
+            
+
+
+            // var rows=5;
+            // for(var i=1; i<= 5; i++) { 
+            //     for(var j=1; j<=i; j++) { 
+            //         document.write('*'); 
+            //         } 
+            //         document.write('<br/>');
+            //     }
         </script>
     </body>
 </html>
