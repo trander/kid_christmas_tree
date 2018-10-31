@@ -1,2 +1,6 @@
 # kid_christmas_tree
-oneday
+
+One Day Class 
+
+Drawing Christmas tree with *
+
