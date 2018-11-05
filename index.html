@@ -6,6 +6,53 @@
                 background-color: whitesmoke;
                 text-align: center;
             }
+            #lights {
+                height: 200px;
+                background: #000;
+            }
+            .bulb {
+                width: 20px;
+                height: 20px;
+                background: #0c0;
+                display: inline-block;
+                margin: 0px 10px;
+                border-radius: 100% 4px;
+                transform: rotate(-45deg);  
+                /* box-shadow: 1px 1px 15px #0c0, -1px -1px 15px #0c0; */
+            }
+            .bulb:nth-child(odd) {
+                background: #6cb6ff;
+                opacity: 1;
+                box-shadow: 1px 1px 15px #6cb6ff, -1px -1px 15px #6cb6ff;
+                animation: bulb-pulse-1 0.8s linear 0s infinite altenate;
+            }
+
+            .bulb:nth-child(even) {
+                background: #0c0;
+                opacity: 1;
+                box-shadow: 1px 1px 15px #0c0, -1px -1px 15px #0c0;
+                animation: bulb-pulse-2 0.8s linear 0s infinite altenate;
+            }
+            @keyframes bulb-pulse-1 {
+                from { 
+                    box-shadow: 1px 1px 15px #6cb6ff, -1px -1px 15px #6cb6ff; 
+                    opacity: 1;
+                } to {
+                    box-shadow: none;
+                    opacity: .3;
+                }
+            }
+            @keyframes bulb-pulse-2 {
+                from {
+                    box-shadow: 1px 1px 15px #6cb6ff, -1px -1px 15px #6cb6ff;
+                    opacity: 1;
+                } to {
+                    box-shadow: none;
+                    opacity: .3;
+               }
+            }
+
+
             #card {
                 border: 5px solid green;
             }
@@ -23,6 +70,18 @@
     </head>
     <body>
         <div id="card">
+            <div id="lights">
+                <script>
+                    for (var i=0;i < 10 ; i++) {
+                        var bulb = document.createElement("div");
+                        bulb.className = "bulb";
+                        document.getElementById("lights").appendChild(bulb);
+                    }
+                
+                </script>
+                <div class="bulb"></div>
+                <div class="bulb"></div>
+            </div>
             <h2>Merry Christmas</h2>
             <div id="tree">
                 <script>
