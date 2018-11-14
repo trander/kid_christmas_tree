@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.neon {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 20px;
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0 0 20px #ff005b;
+}
+
+.neon:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: -1;
+    color: #ff005b;
+    filter: blur(15px);
+}
+
+.neon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fe3a80;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+
+#lights {
+    height: 200px;
+    background: #000;
+}
+
+.bulb {
+    width: 20px;
+    height: 20px;
+    background: #0c0;
+    display: inline-block;
+    margin: 0px 10px;
+    border-radius: 100% 4px;
+    transform: rotate(-45deg);
+    /* box-shadow: 1px 1px 15px #0c0, -1px -1px 15px #0c0; */
+}
+
+
+.bulb:nth-child(odd) {
+    background: #6cb6ff;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #6cb6ff, -1px -1px 15px #6cb6ff;
+    animation: bulb-pulse-1 1.2s linear 0s infinite;
+}
+
+.bulb:nth-child(even) {
+    background: #0c0;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #0c0, -1px -1px 15px #0c0;
+    animation: bulb-pulse-2 1.2s linear 0s infinite;
+}
+
+@keyframes bulb-pulse-1 {
+    from {
+        box-shadow: 1px 1px 15px #6cb6ff, -1px -1px 15px #6cb6ff;
+        opacity: 1;
+    }
+
+    to {
+        box-shadow: none;
+        opacity: .3;
+    }
+}
+
+@keyframes bulb-pulse-2 {
+    from {
+        box-shadow: 1px 1px 15px #6cb6ff, -1px -1px 15px #6cb6ff;
+        opacity: 1;
+    }
+
+    to {
+        box-shadow: none;
+        opacity: .3;
+    }
+}
+
+
+#card {
+    border: 5px solid green;
+}
+
+
+#tree {
+    color: green;
+}
+
+.box {
+    width: 50px;
+    height: 60px;
+}
